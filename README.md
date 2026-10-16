@@ -1,3 +1,5 @@
+<img width="1584" height="672" alt="image" src="https://github.com/user-attachments/assets/48520f08-e5c8-4714-a7f9-77cbcdd24f04" />
+
 # update-quarantine-blocklist
 
 Keep a Juniper **Sky ATP / ATP Cloud** blacklist in step with a quarantine list of
