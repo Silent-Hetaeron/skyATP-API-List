@@ -1,0 +1,14 @@
+# root's crontab (crontab -e). Replace the two source addresses with your own.
+#
+# Every 10 minutes at 3, 13, 23 ... past the hour. The offset keeps the run away
+# from :00/:10/..., when other jobs commonly rewrite the source lists.
+# Output goes to /var/log/update-quarantine-blocklist.log (the script logs it
+# itself when it has no terminal), so there is no need to redirect it.
+QUARANTINE_URLS_URL=https://lists.example.net/quarantine-urls.txt
+QUARANTINE_IPS_URL=https://lists.example.net/quarantine-ips.txt
+# SOURCE_INSECURE_TLS=1     # only for a self-signed source server you cannot trust-store
+
+3-59/10 * * * * /usr/local/sbin/update-quarantine-blocklist.sh
+
+# Health check you can run from monitoring: the last run must have ended cleanly.
+#   grep 'finished, exit code' /var/log/update-quarantine-blocklist.log | tail -n 1 | grep -q 'exit code 0'

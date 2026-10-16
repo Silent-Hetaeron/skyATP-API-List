@@ -1,0 +1,4 @@
+# Copy to ~/.config/skyatp/tokens and run: chmod 600 ~/.config/skyatp/tokens
+# The token is created in the Sky ATP / ATP Cloud portal. It expires and has to
+# be renewed there, then pasted here. Never commit this file.
+SKYATP_API_TOKEN="paste-your-token-here"
